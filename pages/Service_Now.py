@@ -39,6 +39,9 @@ def service_now_page():
         )
 
     st.write(diff)
-    st.multiselect("Service Now Diff", choices)
+    choices = list(diff.keys())
+    choice = st.multiselect("Service Now Diff", choices)
+    if choice:
+        st.write(diff[choice[0]])
 
 service_now_page()
