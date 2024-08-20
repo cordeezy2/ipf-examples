@@ -1,2 +1,3 @@
 streamlit
 ipfabric
+ipfabric-snow

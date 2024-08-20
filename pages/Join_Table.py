@@ -5,6 +5,7 @@ import json
 
 
 def join_table_page():
+    st.set_page_config(page_title="Join Data", page_icon=":link:", layout="centered")
     st.title("Join Table")
     st.write("built using Streamlit [docs.streamlit.io](https://docs.streamlit.io/).")
 
@@ -117,3 +118,6 @@ def join_table_page():
             suffixes=("_current", "_compare"),
         )
         st.write(compared_df)
+
+
+join_table_page()
