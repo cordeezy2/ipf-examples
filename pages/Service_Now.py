@@ -37,8 +37,6 @@ def service_now_page():
             record_limit=record_limit,
             output_verbose=output_verbose,
         )
-
-    st.write(diff)
     choices = list(diff.keys())
     choice = st.multiselect("Service Now Diff", choices)
     if choice:
