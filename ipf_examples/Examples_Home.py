@@ -8,7 +8,7 @@ st.write(
     Welcome to the IP Fabric Examples page.
     This page hopes to give you an overview of the what is possible with the IP Fabric API.
     
-    This is the default "plugin" installed with IP Fabric.
+    This is the default "Extension" installed with IP Fabric.
     """
 
 )
