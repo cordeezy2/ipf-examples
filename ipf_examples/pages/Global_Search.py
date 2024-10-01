@@ -25,14 +25,14 @@ def global_search():
         address = st.text_input(label="IP or MAC Address to search")
         regex = st.text_input(label="Regex to use in search")
         if regex:
-            search_type = st.multiselect(label="Search Type", options=["ipv4", "ipv6", "mac"])
+            search_type = st.multiselect(label="Search Type", options=["ipv4", "ipv6", "mac"], default=["ipv4"], max_selections=1)
         full_scan = st.checkbox(label="Full Scan")
         break_on_match = st.checkbox(label="Break on Match?")
         submitted = st.form_submit_button("Run Global Search")
         if submitted:
             if regex:
                 results = gs.search_regex(
-                    search_type=search_type, address=address, full_scan=full_scan, first_match=break_on_match
+                    search_type=search_type[0], address=address, full_scan=full_scan, first_match=break_on_match
                 )
             else:
                 results = gs.search(address=address, full_scan=full_scan, first_match=break_on_match)
