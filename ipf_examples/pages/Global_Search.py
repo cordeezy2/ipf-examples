@@ -13,7 +13,6 @@ def display_global_search(results):
         st.write(pd.DataFrame.from_records(result["data"]))
 
 
-
 def global_search():
     results = None
     st.set_page_config(page_title="IP Fabric Global Search", page_icon=":mag:", layout="centered")
@@ -25,13 +24,15 @@ def global_search():
         gs = GlobalSearch(client=ipf)
         address = st.text_input(label="IP or MAC Address to search")
         regex = st.text_input(label="Regex to use in search")
+        if regex:
+            search_type = st.multiselect(label="Search Type", options=["ipv4", "ipv6", "mac"])
         full_scan = st.checkbox(label="Full Scan")
         break_on_match = st.checkbox(label="Break on Match?")
         submitted = st.form_submit_button("Run Global Search")
         if submitted:
             if regex:
                 results = gs.search_regex(
-                    search_type=regex, address=address, full_scan=full_scan, first_match=break_on_match
+                    search_type=search_type, address=address, full_scan=full_scan, first_match=break_on_match
                 )
             else:
                 results = gs.search(address=address, full_scan=full_scan, first_match=break_on_match)
