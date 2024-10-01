@@ -32,7 +32,7 @@ def global_search():
         if submitted:
             if regex:
                 results = gs.search_regex(
-                    search_type=search_type[0], address=address, full_scan=full_scan, first_match=break_on_match
+                    search_type=search_type[0], address=regex, full_scan=full_scan, first_match=break_on_match
                 )
             else:
                 results = gs.search(address=address, full_scan=full_scan, first_match=break_on_match)
