@@ -23,8 +23,8 @@ pages = st.navigation(
         "Example Extensions": [
             st.Page(build_home_page, title="Home", icon='🏠'),
             st.Page("models/pages/Global_Search.py", title="Global Search", icon='🔍'),
-            st.Page(IPFReport, title="Built in Reporting", ),
-            st.Page(IPFDoraExample, title="Dora Example", ),
+            st.Page(IPFReport, title="Built in Reporting", icon="📤"),
+            st.Page(IPFDoraExample, title="Dora Example", icon="💶" ),
         ],
         "Base Extension": [
             st.Page(IPFExtension, title="Base Extension", ),
