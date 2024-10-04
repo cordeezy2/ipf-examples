@@ -39,7 +39,6 @@ class IPFReport(IPFExtension):
             if not ipf_client:
                 self.st.write("IP Fabric Client not initialized. Please initialize in the sidebar.")
                 return
-            self.st.write(self.st.session_state)
             server_url = f"https://{ipf_client.base_url.host}"
             os.environ['IPF_URL'] = server_url
             token = self.st.session_state.get("auth")
