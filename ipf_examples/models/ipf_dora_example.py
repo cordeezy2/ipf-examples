@@ -172,7 +172,9 @@ class IPFDoraExample(IPFExtension):
             }
             cve_totals_df = pd.DataFrame.from_dict(dict_for_df)
             cve_dataframes.append(cve_totals_df)
+            self.st.write(f"Total CVEs for Vendor: {vul.vendor}")
             self.st.write(cve_totals_df)
+            self.st.write(vul.cves)
 
         for cve_dataframe in cve_dataframes:
             version_value = cve_dataframe['version'].values[0]
