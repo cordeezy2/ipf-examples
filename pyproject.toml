@@ -10,7 +10,7 @@ packages = [{include = "ipf_examples"}]
 [tool.poetry.dependencies]
 python = ">=3.9,<3.9.7 || >3.9.7,<4.0"
 streamlit = "^1.39.0"
-ipfabric = {version = "^6.9.9", extras = ["all"]}
+ipfabric = {version = "^6.9.10", extras = ["all"]}
 ipfabric-snow = "^0.1.0b15"
 ipfabric-reports = {git = "https://gitlab.com/ip-fabric/integrations/scripts/ipfabric-reports"}
 tomli = "^2.0.2"
