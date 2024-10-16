@@ -20,4 +20,4 @@ RUN python3 -m pip install poetry
 
 RUN poetry install
 
-ENTRYPOINT ["poetry", "run", "streamlit", "run", "ipf_examples/Examples_Home.py", "--server.port=80", "--server.address=0.0.0.0", "--theme.primaryColor=#8C989B", "--theme.backgroundColor=#264183", "--theme.secondaryBackgroundColor=#222D32", "--theme.textColor=#F6F6F6", "--theme.font=monospace"]
+ENTRYPOINT ["poetry", "run", "streamlit", "run", "ipf_examples/Examples_Home.py", "--server.port=80", "--theme.primaryColor=#8C989B", "--theme.backgroundColor=#264183", "--theme.secondaryBackgroundColor=#222D32", "--theme.textColor=#F6F6F6", "--theme.font=monospace"]
